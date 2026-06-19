@@ -4,7 +4,7 @@ class Apex < Formula
   desc "⚡ Multi-Agent Operating System — one person, infinite capacity"
   homepage "https://github.com/lcyluke/apex"
   url "https://github.com/lcyluke/apex/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "18491031d4ee53469b4a62efd24a34736dbadfc693c4641039eebdaaa623157e"
+  sha256 "535e88b3e48258e92450f9b2edffea676c70aa7760004b27790fff9df2dc76f4"
   license "MIT"
 
   depends_on "python@3.12"
