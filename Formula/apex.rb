@@ -3,8 +3,8 @@ class Apex < Formula
 
   desc "⚡ Multi-Agent Operating System — one person, infinite capacity"
   homepage "https://github.com/lcyluke/apex"
-  url "https://github.com/lcyluke/apex/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "1095ebc57f814198146540580a78d1a1393aa91115a0e3023ed77be3461d2cc7"
+  url "https://github.com/lcyluke/apex/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "9ea602340d927e262f10e7479b4aa99ae6797a3d2c60a6b96f3a2f3ee178e2fa"
   license "MIT"
 
   depends_on "python@3.12"
@@ -19,19 +19,11 @@ class Apex < Formula
   end
 
   def post_install
-    ohai "🚀 Apex Fleet Quickstart"
-    puts ""
-    puts "  Initialize your fleet (one-time):"
-    puts "    apex fleet init"
-    puts ""
-    puts "  Start all agents:"
-    puts "    apex fleet start"
-    puts ""
-    puts "  Monitor your fleet:"
-    puts "    apex monitor status"
-    puts "    apex monitor skills"
-    puts ""
-    puts "Docs: https://github.com/lcyluke/apex"
+    ohai "🚀 Apex v0.5.0 installed!"
+    puts "  Quickstart:"
+    puts "    apex tutorial         Interactive walkthrough"
+    puts "    apex fleet init       Create profiles + launch fleet"
+    puts "    apex doctor           System diagnostics"
     puts ""
   end
 
@@ -43,11 +35,12 @@ class Apex < Formula
   def caveats
     <<~EOS
       ⚡ Apex — Multi-Agent Operating System
-
+      
       Quickstart:
-        apex fleet init      Create profiles + launch fleet (one-time)
-        apex fleet start     Start 7 dev agents in tmux windows
-        apex monitor status  Agent status + badminton pipeline
+        apex tutorial         Interactive 5-step walkthrough
+        apex fleet init       Create profiles + launch fleet (one-time)
+        apex fleet start      Start 7 dev agents in tmux windows
+        apex doctor           System diagnostics
 
       Works on macOS, Linux, and Windows (WSL).
       Docs: https://github.com/lcyluke/apex
