@@ -11,9 +11,9 @@ class Apex < Formula
   depends_on "tmux"
 
   def install
-    venv = virtualenv_create(libexec, "python3.12")
-    # Upgrade pip first to get latest wheel resolution
-    system libexec/"bin/pip", "install", "--upgrade", "pip"
+    # Create venv WITH pip — Homebrew's virtualenv_create uses --without-pip
+    system Formula["python@3.12"].opt_bin/"python3.12", "-m", "venv",
+           "--system-site-packages", libexec
     # Install purely from pre-built wheels — zero compilation
     system libexec/"bin/pip", "install", "--only-binary", ":all:", "."
   end
