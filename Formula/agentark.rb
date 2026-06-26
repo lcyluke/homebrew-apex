@@ -13,6 +13,7 @@ class Agentark < Formula
            "--system-site-packages", libexec
     system libexec/"bin/pip", "install", "--retries", "3",
            "--only-binary", ":all:", "."
+    bin.install_symlink libexec/"bin/agentark"
   end
 
   def post_install
